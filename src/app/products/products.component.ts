@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CatalogueService } from '../catalogue.service';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-products',
@@ -20,7 +21,8 @@ export class ProductsComponent implements OnInit {
 
   constructor(public catService:CatalogueService,
     public route:ActivatedRoute,
-    private router:Router) { 
+    private router:Router,
+    public authService:AuthenticationService) { 
 
     }
 
@@ -96,6 +98,13 @@ export class ProductsComponent implements OnInit {
     }
       
     )
+  }
+   onAddProductToCaddy(p){
+
+  }
+
+  onProductDetails(p){
+
   }
 
 
